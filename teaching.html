@@ -85,6 +85,47 @@
     .pub-link a:hover {
       text-decoration: underline;
     }
+    /* Responsive menu style */
+    @media (max-width: 768px) {
+        .sidebar-toggle {
+            display: block;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            background-color: #f8f8f8;
+            width: 250px;
+            height: 100%;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .sidebar.show {
+            display: block;
+        }
+
+        .main-content {
+            margin-left: 0 !important;
+        }
+
+        .menu {
+            flex-direction: row; /* stays horizontal */
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff; /* white background */
+            border-radius: 6px;
+            padding: 10px 10px;
+            margin: 10px;
+        }
+
+        .menu a {
+            margin: 6px 10px;
+            font-size: 0.9em;
+        }
+    }
   </style>
 </head>
 <body>

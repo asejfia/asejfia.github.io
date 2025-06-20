@@ -142,6 +142,56 @@
             margin: 4px 0;
         }
 
+        /* Mobile Sidebar Toggle */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #f8f8f8;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1.2em;
+    z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        background-color: #f8f8f8;
+        width: 250px;
+        height: 100%;
+        overflow-y: auto;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar.show {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        margin: 5px 0;
+    }
+}
+
+
         .main-content {
             margin-left: 270px;
             flex: 1;
@@ -191,19 +241,46 @@
         }
 
         @media (max-width: 768px) {
+            .sidebar-toggle {
+                display: block;
+            }
+
             .sidebar {
-                width: 200px;
+                display: none;
+                position: fixed;
+                z-index: 999;
+                background-color: #f8f8f8;
+                width: 250px;
+                height: 100%;
+                overflow-y: auto;
+                box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            }
+
+            .sidebar.show {
+                display: block;
             }
 
             .main-content {
-                margin-left: 220px;
+                margin-left: 0 !important;
+            }
+
+            .menu {
+                flex-direction: row; /* stays horizontal */
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff; /* white background */
+                border-radius: 6px;
+                padding: 10px 10px;
+                margin: 10px;
             }
 
             .menu a {
-                margin: 0 10px;
+                margin: 6px 10px;
                 font-size: 0.9em;
             }
         }
+
 
         @media (max-width: 480px) {
             .sidebar {
@@ -242,7 +319,16 @@
        }
     </style>
 </head>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('show');
+  }
+</script>
+
 <body>
+  <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
     <div class="sidebar">
         <img src="profile-pic.png" alt="Profile Picture">
         <!-- <h2>About Me</h2> -->

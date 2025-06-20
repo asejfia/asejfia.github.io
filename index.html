@@ -1,584 +1,333 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
-
+<html lang="en">
 <head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/logo-Adriana.png">
-	<!-- Author Meta -->
-	<meta name="author" content="colorlib">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Adriana Sejfia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Academic Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
-	<!--
-			CSS
-			============================================= -->
-	<link rel="stylesheet" href="css/linearicons.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/main-2.css">
+
+
+        body {
+            margin: 0;
+            font-family:'HelveticaNeueW01-45Ligh',"Helvetica Neue" , HelveticaNeue , Helvetica , sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: row;
+            font-size: 16px;
+          	font-weight: 400;
+          	font-style:normal;
+          	color:#615445;
+          }
+        /* } {
+            margin: 0;
+            font-family:'Merriweather', serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: row;
+        } */
+
+        a {
+            color: #B51700;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        /* a{
+          color: #ff0000;
+          text-decoration: none;
+          cursor:pointer
+        }
+
+        a:focus,a:hover{color:#640d00} */
+        .name{
+            font-size: 200%;
+            font-weight: 200;
+            font-family: helvetica neue;
+            font-weight: lighter;
+            display: flex;
+            justify-content: center;
+            /* background-color: #eaeaea; */
+            padding: -10px 0;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        #title{
+          font-size: 200%;
+          font-weight: 200;
+          font-family: helvetica neue;
+          font-weight: lighter;
+          display: flex;
+        }
+
+        .info{
+            /* font-size: 200%; */
+            font-weight: 200;
+            font-family: helvetica neue;
+            font-weight: light;
+            display: flex;
+            justify-content: center;
+            /* background-color: #eaeaea; */
+            padding: -10px 0;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .sidebar {
+            background-color: #f8f8f8;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .sidebar img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                display: block;
+                margin: 0 auto 1em auto;
+            } {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: block;
+                margin: 0 auto 1em auto;
+            }
+
+        .sidebar .contact {
+            margin-top: 1em;
+        }
+
+        .sidebar .contact ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .sidebar .contact ul li {
+            margin: 0;
+        }
+
+        .sidebar .contact ul li a {
+            font-size: 1.2em;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 4px 0;
+        }
+
+        .main-content {
+            margin-left: 270px;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            /* background-color: #eaeaea; */
+            padding: 10px 0;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .menu a {
+            margin: 0 15px;
+            font-size: 1em;
+            font-weight: bold;
+
+        }
+
+        /* .menu a:hover {
+            color: #007acc;
+        } */
+
+        .bio {
+          margin-left: 20px;
+          flex: 1;
+          padding: 20px;
+        }
+
+        .team {
+          margin-left: 20px;
+          flex: 1;
+          padding: 20px;
+        }
+
+        .name {
+          margin-left: 480px;
+        }
+
+        h3 {
+            margin-bottom: 0.1em; /* or a smaller value like 0.3em or even 0 */
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 220px;
+            }
+
+            .menu a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .menu a {
+                font-size: 0.8em;
+            }
+            .news-box {
+           margin-top: 2em;
+       }
+     }
+
+       .news-item {
+           margin-bottom: 1em;
+           padding: 0.5em;
+       }
+
+       .news-date {
+           font-weight: 700;
+           text-align: left;
+           color: #555;
+           font-size: 0.85em;
+           margin-bottom: 4px;
+           text-transform: uppercase;
+           letter-spacing: 0.8px;
+       }
+
+       .news-text {
+           text-align: left;
+       }
+    </style>
 </head>
-
 <body>
-
-	<!-- Start Preloader Area -->
-	<div class="preloader-area">
-		<div class="loader-box">
-			<div class="loader"></div>
-		</div>
-	</div>
-	<!-- End Preloader Area -->
-
-
-	<!-- Start Header Area -->
-	<header id="header">
-		<div class="container main-menu">
-			<div class="row align-items-center d-flex">
-				<div id="logo" >
-					<a href="index.html"><img src="img/logo-Adriana.png" alt="" title="" /></a>
-					<!--<h2> Adriana Sejfia </h2>-->
-				</div>
-				<nav id="nav-menu-container">
-					<ul class="nav-menu">
-						<li class = ""><a href="#aboutme">About</a></li>
-						<li class = ""><a href="#education">Education </a> </li>
-						<li class = ""> <a href="#research">Employment</a>
-						<li class = ""><a href="#publications">Publications</a></li>
-
-						</li>
-
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
-	<!-- End Header Area -->
-
-
-	<!-- start banner Area -->
-	<section class="home-banner-area">
-		<div class="container">
-			<div class="row  d-flex align-items-center">
-				<div class="banner-content col-lg-6 col-md-9 justify-content-center ">
-				<h1> Adriana Sejfia</h1>
-				<h3> Assistant Professor/Lecturer </h3>
-				<h4> School of Informatics </h4>
-				<h4> University of Edinburgh</h4>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End banner Area -->
-
-	<!-- Start About Area -->
-	<section class="about-area section-gap" id = "aboutme">
-		<div class="container">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-lg-6 about-left">
-					<img class="img-fluid" src="img/Adriana_Softarch.jpg" alt="">
-				</div>
-				<div class="col-lg-5 col-md-12 about-right">
-					<div class="section-title">
-						<h2>about me</h2>
-					</div>
-					<div class="mb-50 wow fadeIn" data-wow-duration=".8s">
-						<p>
-							I am Adriana Sejfia, an Assistant Professor (Lecturer, in the UK system) at the <a href="https://www.ed.ac.uk/informatics">School of Informatics</a>, 
-							<a href="https://www.ed.ac.uk/">University of Edinburgh</a>. Within the School, I am a member of the 
-							<a href="https://web.inf.ed.ac.uk/icsa/">Institute for Computing Systems Architecture (ICSA)</a>. 
-							Previously, I completed my PhD in Computer Science at the University of Southern California, where I was advised 
-							by Professor<a href="https://web.archive.org/web/20220331115156/http://softarch.usc.edu/"> Nenad Medvidović</a>, at the 
-							<a href="https://web.archive.org/web/20220331115156/https://softarch.usc.edu/"> Software Architecture Research Group</a>. 
-							During my PhD, my research was generously supported by the 
-							<a href="https://web.archive.org/web/20220331115156/https://ai.googleblog.com/2020/10/announcing-2020-google-phd-fellows.html">Google PhD Fellowship</a>.
-						</p>
-
-						<p> 
-							My research interests lie primarily in the field of software engineering. Specifically, I aim to help developers 
-						        with their security tasks by learning from past security issues and their fixes. To that end, I make use of program 
-							analysis and machine learning to generate actionable security-related insights.
-									
-						</p>
-						<p>
-						        <b> I am seeking bright, motivated PhD students to work with me on these topics. </b> 
-							Please email me at the email provided below if you're interested. 
-						</p>
-
-
-					</div>
-
-					<a href="Resume/Sejfia_CV_Website.pdf" class="primary-btn" data-text="CV">
-						<span>C</span>
-						<span>V</span>
-						<!--<span>s</span>
-						<span>u</span>
-						<span>m</span>
-						<span>e</span>-->
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End About Area -->
-
-	<!-- Start Job History Area Area -->
-	<section class="job-area offwhite section-gap-top section-gap-bottom-90" id ="education">
-		<div class="container">
-			<div class="row d-flex">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Education</h2>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>University of Southern California</h4>
-								<p>PhD in Computer Science</p>
-							</div>
-							<div class="top-right">
-							<p> August 2018 - November 2023 </p>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Rochester Institute of Technology</h4>
-								<p>Master of Science in Software Engineering</p>
-							</div>
-							<div class="top-right">
-								<p> September 2016 - May 2018 </p>
-
-								</div>
-						</div>
-					</div>
-				</div>
-
-
-
-				<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Rochester Institute of Technology - Kosovo Campus</h4>
-								<p>Bachelor of Science</p>
-								<p>Concentration: Information Technology </p>
-							</div>
-							<div class="top-right">
-								<p> September 2011 - May 2015 </p>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-
-			</div>
-		</div>
-	</section>
-
-	<section class="job-area offwhite section-gap-top section-gap-bottom-90" id ="research">
-		<div class="container">
-			<div class="row d-flex">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Employment</h2>
-
-					</div>
-				</div>
-			</div>
-						<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>University of Edinburgh, School of Informatics</h4>
-								<p>Assistant Professor/Lecturer</p>
-								<p>Field: Software Engineering</p>
-							</div>
-							<div class="top-right">
-							<p> February 2024 - present </p>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>University of Southern California, CS Department</h4>
-								<p>Research Assistant</p>
-								<p> Professor: Nenad Medvidović </p>
-							</div>
-							<div class="top-right">
-							<p> August 2018 - December 2023 </p>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Google Research</h4>
-								<p>Research Intern</p>
-								<p> Static analysis for differential privacy </p>
-							</div>
-							<div class="top-right">
-							<p> May 2022 - September 2022 </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Github Office of the CTO (OCTO)</h4>
-								<p>Research Intern</p>
-								<p> Detection of malicious npm packages </p>
-							</div>
-							<div class="top-right">
-							<p> May 2021 - September 2021 </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Rochester Institute of Technology, SE Department</h4>
-								<p>Research Assistant</p>
-								<p> Professor: Mehdi Mirakhorli </p>
-							</div>
-							<div class="top-right">
-								<p> December 2016 - May 2018 </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Rochester Institute of Technology - Kosovo Campus</h4>
-								<p>Research Assistant</p>
-								<p>Professor: Arni Arnthorsson </p>
-							</div>
-							<div class="top-right">
-								<p> January 2013 - May 2013 </p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-	<!-- Start Job History Area Area -->
-	<section class="job-area offwhite section-gap-top section-gap-bottom-90" id = "publications">
-		<div class="container">
-			<div class="row d-flex">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Publications</h2>
-
-					</div>
-				</div>
-
-			</div>
-			<div class="row">
-				<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h5> International Conference on Software Engineering (ICSE), 2024</h5>
-								<p>  Toward Improved Deep Learning-based Vulnerability Detection </p>
-
-								<p> <b>Adriana Sejfia</b>, Satyaki Das, Saad Shafiq, Nenad Medvidović </p>
-								<p> <em> to appear </em> </p>
-
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h5> International Conference on Software Engineering (ICSE), 2022</h5>
-								<p>  Practical Automated Detection of Malicious npm Packages </p>
-
-								<p> <b>Adriana Sejfia</b>, Max Schäfer </p>
-
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h5>Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE), 2021</h5>
-								<p>  Identifying Casualty Changes in Software Patches </p>
-
-								<p> <b>Adriana Sejfia</b>, Yixue Zhao, Nenad Medvidović </p>
-
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h5>Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE), 2020</h5>
-								<p>  FrUITeR – A Framework for Evaluating UI Test Reuse </p>
-
-								<p> Yixue Zhao, Justin Chen, <b>Adriana Sejfia</b>, Marcelo Schmitt Laser, Jie Zhang, Federica Sarro, Mark Harman, Nenad Medvidović </p>
-
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			 <div class="row">
-	 <div class="col-lg-10">
-		 <div class="single-job">
-			 <div class="top-sec d-flex justify-content-between">
-				 <div class="top-left">
-																															                                                                 <h5>International Conference on Software Architecture (ICSA), 2020</h5>
-																																							 <p> Strategies for Pattern-Based Detection of Architecturally-Relevant Software Vulnerabilities</p>
-
-																																										  <p> <b> Adriana Sejfia,</b> Nenad Medvidović </p>
-
-																																																															                                                        					 </div>
-																																																																						                                  </div>
-																																																																						                    </div>
-																																																																						          </div>
-																																																																						</div>
-
-			<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h5>Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE), 2019</h4>
-								<p>Achilles’ Heel of Plug-and-Play Software Architectures: A Grounded Theory Based Approach</p>
-
-								<p> Joanna C. S. Santos, <b>Adriana Sejfia,</b> Taylor Corrello, Smruthi Gadenkanahlli, Mehdi Mirakhorli</p>
-
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h5>Workshop on Establishing a Community-Wide Infrastructure for Architecture-Based Software Engineering (ECASE), 2019</h4>
-								<p>A Pilot Study on Architecture and Vulnerabilities: Lessons Learned</p>
-
-								<p> Adriana Sejfia </p>
-
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-
-
-
-		<div class="row">
-				<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-						<div class="top-left">
-								<h5>Journal of Systems and Software (JSS), 2018</h4>
-								<p>An Empirical Study of Tactical Vulnerabilities</p>
-
-								<p>Joanna C.S.Santos, Katy Tarrit, <b> Adriana Sejfia,</b> Mehdi Mirakhorli, Matthias Galster</p>
-
-							</div>
-
-
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-			<div class="row">
-					<div class="col-lg-10">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h5>International Conference on Software Architecture (ICSA), 2017</h4>
-								<p>Understanding Software Vulnerabilities Related to Architectural Security Tactics: An
-Empirical Investigation of Chromium, PHP and Thunderbird</p>
-
-								<p> Joanna C. S. Santos, Anthony Peruma, Mehdi Mirakhorli, Matthias Galstery, Jairo Veloz Vidal, <b> Adriana Sejfia </b> </p>
-								<i> Best Paper Award </i>
-							</div>
-
-						</div>
-
-					</div>
-				</div>
-				</div>
-
-	</section>
-
-
-
-
-
-	<!-- Start Contact Area -->
-	<section class="contact-area section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="contact-title">
-						<h2>Contact Me</h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="row mt-80">
-
-				<div class="col-lg-12 col-md-4">
-					<div class="contact-box">
-						<h4> 	&#60;first initial&#62;&#60;last name&#62; [at] ed [dot] ac [dot] uk </h4>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</section>
-	<!-- End Contact Area -->
-
-
-	<!-- start footer Area -->
-	<footer class="footer-area">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-12">
-					<div class="footer-top flex-column">
-						<div class="footer-logo">
-							<a href="#">
-								<img src="img/logo-Adriana.png" alt="">
-							</a>
-							<h4>Follow Me</h4>
-						</div>
-						<div class="footer-social">
-							<a href="https://twitter.com/AdrianaSejfia"><i class="fa fa-twitter"></i></a>
-							<a href="https://github.com/asejfia"><i class="fa fa-github"></i></a>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row footer-bottom justify-content-center">
-				<p class="col-lg-8 col-sm-12 footer-text">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		</div>
-	</footer>
-	<!-- End footer Area -->
-
-	<!-- ####################### Start Scroll to Top Area ####################### -->
-	<div id="back-top">
-		<a title="Go to Top" href="#">
-			<i class="lnr lnr-arrow-up"></i>
-		</a>
-	</div>
-	<!-- ####################### End Scroll to Top Area ####################### -->
-
-	<script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	 crossorigin="anonymous"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-	<script src="js/easing.min.js"></script>
-	<script src="js/hoverIntent.js"></script>
-	<script src="js/superfish.min.js"></script>
-	<script src="js/mn-accordion.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/isotope.pkgd.min.js"></script>
-	<script src="js/jquery.circlechart.js"></script>
-	<script src="js/mail-script.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/main.js"></script>
+    <div class="sidebar">
+        <img src="profile-pic.png" alt="Profile Picture">
+        <!-- <h2>About Me</h2> -->
+        <!-- <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Teaching</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul> -->
+        <div class="info">
+          <ul>
+            <li> Adriana Sejfia </li>
+            <li> Assistant Professor </li>
+            <li> School of Informatics </li>
+            <li> University of Edinburgh </li>
+          </ul>
+        </div>
+
+        <div class="contact">
+            <ul>
+                <li><a href="mailto:asejfia@ed.ac.uk" title="Email"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://bsky.app/profile/adrianasejfia.bsky.social" title="Bluesky" target="_blank"><i class="fas fa-globe"></i></a></li>
+                <li><a href="cv.pdf" title="CV" target="_blank"><i class="fa-regular fa-file"></i></a></li>
+                <li><a href="https://scholar.google.com/citations?user=l4fa4fwAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fab fa-google-scholar"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/adriana-sejfia/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/asejfia" title="Github" target="_blank"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+        <h3 id="title"> news </h3>
+        <div class="news-item">
+                <div class="news-date">Jun 2025</div>
+                <div class="news-text">Awarded a Google Research Scholar Award.</div>
+            </div>
+    </div>
+
+    <div class="main-content">
+        <!-- <div class="name">
+            <p> <b> adriana sejfia </b> </p>
+        </div> -->
+        <div class="menu">
+            <a href="#">home </a>
+            |
+            <a href="publications.html">publications </a>
+            |
+            <a href="teaching.html">teaching</a>
+            |
+            <a href="contact.html">contact</a>
+        </div>
+
+        <div class="bio">
+            <h3 id="title"> about me</h3>
+            <p> I am an Assistant Professor (Lecturer, in the UK system) at the School of Informatics, University of Edinburgh.
+              Within the School, I am a member of the Institute for Computing Systems Architecture (ICSA).
+              Previously, I completed my PhD in Computer Science at the University of Southern California,
+              where I was advised by Professor Nenad Medvidović, at the Software Architecture Research Group.
+              During my PhD, my research was generously supported by the Google PhD Fellowship.
+
+            </br>
+            </br>
+
+              My research interests lie primarily in the field of software engineering. Specifically, I aim to help developers
+              with their security tasks by learning from past security issues and their fixes. To that end, I make use of
+              program analysis and machine learning to generate actionable security-related insights.
+
+            </br>
+            </br>
+              Outside of work, I enjoy reading, hiking, learning new languages (currently working on Catalan), and spending time
+              with my dog.
+
+            </p>
+        </div>
+
+        <div class="team">
+          <h3 id="title"> team </h3>
+
+          I am fortunate to work with a great team of PhD students and researchers.
+
+          <ul>
+              <li> <a href="https://mingscai.github.io/"> Mingsheng Cai (PhD student) </a> </li>
+              <li>Rob Flood (Research assistant) </li>
+          </ul>
+
+          I am also always seeking bright, motivated PhD students to work with me on the topics mentioned above. Please email me if you're interested.
+        </div>
+    </div>
 </body>
-
 </html>
